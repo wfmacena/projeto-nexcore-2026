@@ -1,0 +1,58 @@
+# Equipamentos de Rede - Planilha de Orçamento
+
+## NexCore Tecnologia
+
+---
+
+## 1. Resumo por Local
+
+| Local | Firewall | Core Switch | Switch Distribuição | Access Switch | APs Wi-Fi 6 | Roteador WAN | Outros |
+|-------|----------|-------------|---------------------|---------------|-------------|--------------|--------|
+| **Matriz SP** | Palo Alto PA-460 (NGFW) | Aruba 8360-48Y6C | 2x Aruba 6300M 48G | 10x Aruba 6200F 48G PoE+ | 30x Aruba AP-615 (Wi-Fi 6) | 2x Juniper MX204 (MPLS + Fibra) | Patch panels, KVM, Rack cabos |
+| **Filial Campinas** | Palo Alto PA-220R | Aruba 6300M 48G (core) | - | 5x Aruba 6200F 48G PoE+ | 15x Aruba AP-615 | Juniper NFX250 (SD-WAN) | - |
+| **Filial Ribeirão** | Palo Alto PA-220R | Aruba 6300M 24G (core) | - | 3x Aruba 6200F 48G PoE+ | 10x Aruba AP-615 | Juniper NFX250 (SD-WAN) | - |
+
+---
+
+## 2. Orçamento Detalhado (em BRL)
+
+| Categoria | Equipamento | Qtd | Valor Unitário | Subtotal | Fornecedor |
+|-----------|-------------|-----|----------------|----------|------------|
+| **Firewalls Next-Gen** | Palo Alto PA-460 (NGFW) — throughput 22 Gbps | 1 | R$ 98.000 | R$ 98.000 | Palo Alto |
+| Firewalls Next-Gen | Palo Alto PA-220R (filiais, 1,9 Gbps) | 2 | R$ 22.000 | R$ 44.000 | Palo Alto |
+| Firewalls Next-Gen | Suporte Threat Prevention 3 anos (PA-460 + 2x 220R) | 3 | R$ 36.000 | R$ 108.000 | Palo Alto |
+| **Switches Core** | Aruba 8360-48Y6C (48x25G + 6x100G, Matriz) | 1 | R$ 145.000 | R$ 145.000 | HPE Aruba |
+| Switches Core | Aruba 6300M 48G PoE+ (Core Campinas + Distribuição Matriz) | 3 | R$ 28.000 | R$ 84.000 | HPE Aruba |
+| Switches Core | Aruba 6300M 24G PoE+ (Core Ribeirão) | 1 | R$ 18.000 | R$ 18.000 | HPE Aruba |
+| **Switches Access (armários telecom)** | Aruba 6200F 48G PoE+ 370W (armários de andar) | 18 | R$ 8.500 | R$ 153.000 | HPE Aruba |
+| Switches Access | Aruba Instant On 1930 24G PoE+ (armários menores / IoT) | 10 | R$ 2.500 | R$ 25.000 | HPE Aruba |
+| **Wireless (Wi-Fi 6)** | Aruba AP-615 (Wi-Fi 6E 4x4 MU-MIMO, interno) | 55 | R$ 2.800 | R$ 154.000 | HPE Aruba |
+| Wireless (Wi-Fi 6) | Aruba 7205 Wireless Controller (controla todos APs) | 1 | R$ 36.000 | R$ 36.000 | HPE Aruba |
+| Wireless (Wi-Fi 6) | ClearPass Policy Manager (RADIUS + 802.1x + Captive Portal) 3 anos | 1 | R$ 45.000 | R$ 45.000 | HPE Aruba |
+| **Roteadores / WAN** | Juniper MX204 (4x 10G, Matriz: MPLS + Fibra 2 ISPs) | 2 | R$ 85.000 | R$ 170.000 | Juniper |
+| Roteadores / WAN | Juniper NFX250 SD-WAN (filiais: MPLS + 4G failover) | 2 | R$ 28.000 | R$ 56.000 | Juniper |
+| **Telefonia IP** | PABX IP Yeastar P-Series Enterprise (200 ramais) | 1 | R$ 32.000 | R$ 32.000 | Yeastar |
+| Telefonia IP | Telefone IP Yealink T54W com PoE (estações) | 250 | R$ 650 | R$ 162.500 | Yealink |
+| **Cabeamento e Rack** | Cabeamento CAT6A certificado (1500 pontos) + Patch panels CAT6A 48p (40) | 1 lote | R$ 280.000 | R$ 280.000 | Commscope / Furukawa |
+| Cabeamento e Rack | Fibra Óptica OM4 entre racks + módulos SFP+ 10G | 1 lote | R$ 30.000 | R$ 30.000 | Furukawa |
+| **Internet e Links** | Fibra Óptica GIGA (Matriz SP, 2 ISPs redundantes, contrato 3 anos) | 2x 3 anos | R$ 8.000/mês | R$ 576.000 | Vivo / Claro |
+| Internet e Links | MPLS 500 Mbps (Matriz ↔ Campinas ↔ Ribeirão, 3 locais) (3 anos) | 3x 3 anos | R$ 9.000/mês | R$ 972.000 | Claro Net |
+| Internet e Links | Fibra GIGA nas 2 filiais (cada, 3 anos) | 2x 3 anos | R$ 3.500/mês | R$ 252.000 | Vivo Local |
+| Internet e Links | Failover 4G/5G em cada local (3 links, 3 anos) | 3x 3 anos | R$ 1.200/mês | R$ 129.600 | TIM |
+| | | | | | |
+| **SUBTOTAL REDE (CAPEX)** | | | | **R$ 1.520.500** | |
+| **SUBTOTAL LINKS 3 ANOS (OPEX)** | | | | **R$ 1.929.600** | |
+| **TOTAL GERAL D3 (Rede + Links, 3 anos)** | | | | **R$ 3.450.100** | |
+
+---
+
+## 3. Sumário Conexões
+
+| Conexão | Tipo | Largura de Banda | Failover |
+|---------|------|-----------------|----------|
+| Internet Matriz SP | Fibra Óptica GIGA x2 (diversos ISP) | 1 Gbps cada | 4G/5G 300 Mbps |
+| Internet Filial Campinas | Fibra Óptica GIGA | 1 Gbps | 4G/5G 200 Mbps |
+| Internet Filial Ribeirão | Fibra Óptica GIGA | 1 Gbps | 4G/5G 200 Mbps |
+| Matriz ↔ Campinas | MPLS L3VPN (Dedicado) | 500 Mbps | Failover via IPSEC sobre internet (MPLS down) |
+| Matriz ↔ Ribeirão | MPLS L3VPN (Dedicado) | 300 Mbps | Failover via IPSEC sobre internet |
+| VPN Usuários Remotos | Always-On VPN (IKEv2) no Firewall Palo Alto | 500 usuários concorrentes | - |

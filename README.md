@@ -90,4 +90,4 @@ Itens de entrega:
 
 ## ⚠️ Aviso de Privacidade
 
-Este repositório é público. Nomes pessoais, RAs e documentos identificáveis não estão inclusos neste repositório e serão enviados diretamente ao professor no PDF final. 
+Este repositório é público. Nomes pessoais, RAs e documentos identificáveis não estão inclusos neste repositório e serão enviados diretamente ao professor no PDF final.

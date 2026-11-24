@@ -79,7 +79,7 @@ Empresa brasileira especializada em **infraestrutura de TI, automação intelige
 
 ## 📅 Entrega Final
 
-**Data:** 27/11/2026 (Sexta-feira — última semana de novembro)
+**Data:** 29/11/2026 (Sexta-feira — última semana de novembro)
 
 Itens de entrega:
 1. **Arquivo PDF:** Resumo, integrantes, links do GitHub e do vídeo
@@ -90,4 +90,4 @@ Itens de entrega:
 
 ## ⚠️ Aviso de Privacidade
 
-Este repositório é público. Nomes pessoais, RAs e documentos identificáveis não estão inclusos neste repositório e serão enviados diretamente ao professor no PDF final.
+Este repositório é público. Nomes pessoais, RAs e documentos identificáveis não estão inclusos neste repositório e serão enviados diretamente ao professor no PDF final. 
